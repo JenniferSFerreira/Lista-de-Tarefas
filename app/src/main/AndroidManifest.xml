@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ListaDeTarefas">
-        <activity android:name=".MainActivity">
-            <!--android:exported="true". Coloquei na activity abaixo-->
-        </activity>
-
-        <activity android:name=".ui.AddTaskActivity"
+        <activity android:name=".ui.MainActivity"
             android:exported="true">
+            <!--android:exported="true". Coloquei na activity abaixo-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.AddTaskActivity">
+            <!--android:exported="true"> -->
         </activity>
 
     </application>
