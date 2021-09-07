@@ -1,8 +1,10 @@
 package com.example.listadetarefas.ui
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.listadetarefas.databinding.ActivityMainBinding
 import com.example.listadetarefas.datasource.TaskDataSource
 
@@ -25,15 +27,27 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener {
             startActivityForResult(Intent(this, AddTaskActivity::class.java), CREATE_NEW_TASK)
         }
+        adapter.listenerEdit = {
+            val intent = Intent(this, AddTaskActivity::class.java)
+            intent.putExtra(AddTaskActivity.TASK_ID, it.id)
+            startActivityForResult(intent, CREATE_NEW_TASK)
+        }
+        adapter.listenerDelete = {
+            TaskDataSource.deleteTask(it)
+            updateList()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == CREATE_NEW_TASK) {
-            binding.rvTasks.adapter = adapter
-            adapter.submitList(TaskDataSource.getList())
+        if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) updateList()
+        binding.rvTasks.adapter = adapter
+        adapter.submitList(TaskDataSource.getList())
 
-        }
+    }
+
+    private fun updateList(){
+        adapter.submitList(TaskDataSource.getList())
     }
     companion object {
         private const val CREATE_NEW_TASK = 1000

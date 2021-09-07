@@ -7,4 +7,6 @@
     <string name="label_cancel">Cancelar</string>
     <string name="label_tasks">Inicio</string>
     <string name="label_news_task">Nova Tarefa</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_delete">Deletar</string>
 </resources>
