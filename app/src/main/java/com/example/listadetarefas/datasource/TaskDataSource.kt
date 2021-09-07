@@ -6,7 +6,7 @@ object TaskDataSource {
 
     private val list = arrayListOf<Task>()
 
-    fun getList() = list
+    fun getList() = list.toList()
 
     fun insertTask(task: Task) {
         if (task.id == 0) {
@@ -18,6 +18,7 @@ object TaskDataSource {
     }
 
     fun findByeId(taskId: Int) = list.find { it.id == taskId }
+
     fun deleteTask(task: Task) {
         list.remove(task)
 
