@@ -6,7 +6,12 @@
         <item name="colorPrimary">#293B5F</item>
         <item name="colorOnPrimary">#FFFFFFFF</item>
         <item name="colorSecondary">#293B5F</item>
-        <item name="colorOnSecondary">#DBE6FD</item> <!--Alterar cor -->
+        <item name="colorOnSecondary">#DBE6FD</item>
+        <item name="android:windowBackground">#EDE1D1CB</item>
+
+
+
+        <!--Alterar cor -->
 
 
 

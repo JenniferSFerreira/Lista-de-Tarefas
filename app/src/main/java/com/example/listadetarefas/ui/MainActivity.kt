@@ -27,8 +27,7 @@ class MainActivity : AppCompatActivity() {
         updateList()
 
         insertListeners()
-        //DATA STTORE
-        //ROOM
+
     }
 
     private fun insertListeners() {

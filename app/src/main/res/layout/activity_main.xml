@@ -11,8 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         android:text="@string/label_tasks"
         android:textColor="#FF000000"
         android:textSize="24sp"
@@ -48,19 +48,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="@string/label_news_task" />
 
-    <!--<androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/menu"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@drawable/ic_menu_icon"
-        app:navigationIcon="@drawable/ic_menu_icon"
-        app:navigationIconTint="@color/black"
-        />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
